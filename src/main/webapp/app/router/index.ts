@@ -48,6 +48,12 @@ const SysUserRole = () => import('../entities/sys-user-role/sys-user-role.vue');
 const SysUserRoleUpdate = () => import('../entities/sys-user-role/sys-user-role-update.vue');
 // prettier-ignore
 const SysUserRoleDetails = () => import('../entities/sys-user-role/sys-user-role-details.vue');
+// prettier-ignore
+const SysResources = () => import('../entities/sys-resources/sys-resources.vue');
+// prettier-ignore
+const SysResourcesUpdate = () => import('../entities/sys-resources/sys-resources-update.vue');
+// prettier-ignore
+const SysResourcesDetails = () => import('../entities/sys-resources/sys-resources-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 Vue.use(Router);
@@ -263,6 +269,31 @@ export default new Router({
       path: '/entity/sys-user-role/:sysUserRoleId/view',
       name: 'SysUserRoleView',
       component: SysUserRoleDetails,
+      meta: { authorities: ['ROLE_USER'] }
+    }
+    ,
+    {
+      path: '/entity/sys-resources',
+      name: 'SysResources',
+      component: SysResources,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-resources/new',
+      name: 'SysResourcesCreate',
+      component: SysResourcesUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-resources/:sysResourcesId/edit',
+      name: 'SysResourcesEdit',
+      component: SysResourcesUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-resources/:sysResourcesId/view',
+      name: 'SysResourcesView',
+      component: SysResourcesDetails,
       meta: { authorities: ['ROLE_USER'] }
     }
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here

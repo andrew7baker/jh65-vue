@@ -28,6 +28,7 @@ import SysRoleService from '@/entities/sys-role/sys-role.service';
 import SysRoleResourcesService from '@/entities/sys-role-resources/sys-role-resources.service';
 import SysUserService from '@/entities/sys-user/sys-user.service';
 import SysUserRoleService from '@/entities/sys-user-role/sys-user-role.service';
+import SysResourcesService from '@/entities/sys-resources/sys-resources.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 Vue.config.productionTip = false;
@@ -86,6 +87,7 @@ new Vue({
     sysRoleResourcesService: () => new SysRoleResourcesService(),
     sysUserService: () => new SysUserService(),
     sysUserRoleService: () => new SysUserRoleService(),
+    sysResourcesService: () => new SysResourcesService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService
   },

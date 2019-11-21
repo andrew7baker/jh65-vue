@@ -18,6 +18,7 @@
     <include file="config/liquibase/changelog/20191121062623_added_entity_SysRoleResources.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191121062624_added_entity_SysUser.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191121062625_added_entity_SysUserRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191121071936_added_entity_SysResources.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

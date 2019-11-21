@@ -1,0 +1,39 @@
+entity SysResources {
+	name String,
+    type String,
+    url String,
+    permission String,
+    parentId Long,
+    sort Integer
+}
+
+entity SysRole {
+	name String,
+    description String,
+    available Integer,
+    createTime Instant,
+    updateTime Instant
+}
+
+entity SysRoleResources {
+	roleId String,
+    resourcesId String,
+    createTime Instant,
+    updateTime Instant
+}
+
+entity SysUser {
+	username String,
+    password String,
+    nickname String,
+    mobile String,
+    email String,
+    qq String
+}
+
+entity SysUserRole {
+	userId String,
+    roleId String,
+    createTime Instant,
+    updateTime Instant
+}

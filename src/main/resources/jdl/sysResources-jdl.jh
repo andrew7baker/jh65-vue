@@ -1,0 +1,8 @@
+entity SysResources {
+	name String,
+    type String,
+    url String,
+    permission String,
+    parentId Long,
+    sort Integer
+}

@@ -24,6 +24,30 @@ const JhiLogsComponent = () => import('../admin/logs/logs.vue');
 const JhiAuditsComponent = () => import('../admin/audits/audits.vue');
 const JhiMetricsComponent = () => import('../admin/metrics/metrics.vue');
 /* tslint:disable */
+// prettier-ignore
+const SysRole = () => import('../entities/sys-role/sys-role.vue');
+// prettier-ignore
+const SysRoleUpdate = () => import('../entities/sys-role/sys-role-update.vue');
+// prettier-ignore
+const SysRoleDetails = () => import('../entities/sys-role/sys-role-details.vue');
+// prettier-ignore
+const SysRoleResources = () => import('../entities/sys-role-resources/sys-role-resources.vue');
+// prettier-ignore
+const SysRoleResourcesUpdate = () => import('../entities/sys-role-resources/sys-role-resources-update.vue');
+// prettier-ignore
+const SysRoleResourcesDetails = () => import('../entities/sys-role-resources/sys-role-resources-details.vue');
+// prettier-ignore
+const SysUser = () => import('../entities/sys-user/sys-user.vue');
+// prettier-ignore
+const SysUserUpdate = () => import('../entities/sys-user/sys-user-update.vue');
+// prettier-ignore
+const SysUserDetails = () => import('../entities/sys-user/sys-user-details.vue');
+// prettier-ignore
+const SysUserRole = () => import('../entities/sys-user-role/sys-user-role.vue');
+// prettier-ignore
+const SysUserRoleUpdate = () => import('../entities/sys-user-role/sys-user-role-update.vue');
+// prettier-ignore
+const SysUserRoleDetails = () => import('../entities/sys-user-role/sys-user-role-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 Vue.use(Router);
@@ -140,6 +164,106 @@ export default new Router({
       name: 'JhiConfigurationComponent',
       component: JhiConfigurationComponent,
       meta: { authorities: ['ROLE_ADMIN'] }
+    }
+    ,
+    {
+      path: '/entity/sys-role',
+      name: 'SysRole',
+      component: SysRole,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-role/new',
+      name: 'SysRoleCreate',
+      component: SysRoleUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-role/:sysRoleId/edit',
+      name: 'SysRoleEdit',
+      component: SysRoleUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-role/:sysRoleId/view',
+      name: 'SysRoleView',
+      component: SysRoleDetails,
+      meta: { authorities: ['ROLE_USER'] }
+    }
+    ,
+    {
+      path: '/entity/sys-role-resources',
+      name: 'SysRoleResources',
+      component: SysRoleResources,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-role-resources/new',
+      name: 'SysRoleResourcesCreate',
+      component: SysRoleResourcesUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-role-resources/:sysRoleResourcesId/edit',
+      name: 'SysRoleResourcesEdit',
+      component: SysRoleResourcesUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-role-resources/:sysRoleResourcesId/view',
+      name: 'SysRoleResourcesView',
+      component: SysRoleResourcesDetails,
+      meta: { authorities: ['ROLE_USER'] }
+    }
+    ,
+    {
+      path: '/entity/sys-user',
+      name: 'SysUser',
+      component: SysUser,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-user/new',
+      name: 'SysUserCreate',
+      component: SysUserUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-user/:sysUserId/edit',
+      name: 'SysUserEdit',
+      component: SysUserUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-user/:sysUserId/view',
+      name: 'SysUserView',
+      component: SysUserDetails,
+      meta: { authorities: ['ROLE_USER'] }
+    }
+    ,
+    {
+      path: '/entity/sys-user-role',
+      name: 'SysUserRole',
+      component: SysUserRole,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-user-role/new',
+      name: 'SysUserRoleCreate',
+      component: SysUserRoleUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-user-role/:sysUserRoleId/edit',
+      name: 'SysUserRoleEdit',
+      component: SysUserRoleUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/sys-user-role/:sysUserRoleId/view',
+      name: 'SysUserRoleView',
+      component: SysUserRoleDetails,
+      meta: { authorities: ['ROLE_USER'] }
     }
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
   ]

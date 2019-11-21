@@ -24,6 +24,10 @@ import '../content/scss/vendor.scss';
 import AlertService from '@/shared/alert/alert.service';
 import ConfigurationService from '@/admin/configuration/configuration.service';
 
+import SysRoleService from '@/entities/sys-role/sys-role.service';
+import SysRoleResourcesService from '@/entities/sys-role-resources/sys-role-resources.service';
+import SysUserService from '@/entities/sys-user/sys-user.service';
+import SysUserRoleService from '@/entities/sys-user-role/sys-user-role.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 Vue.config.productionTip = false;
@@ -78,6 +82,10 @@ new Vue({
     logsService: () => new LogsService(),
     metricsService: () => new MetricsService(),
     alertService: () => alertService,
+    sysRoleService: () => new SysRoleService(),
+    sysRoleResourcesService: () => new SysRoleResourcesService(),
+    sysUserService: () => new SysUserService(),
+    sysUserRoleService: () => new SysUserRoleService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService
   },

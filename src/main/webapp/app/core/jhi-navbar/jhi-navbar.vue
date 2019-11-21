@@ -26,6 +26,26 @@
                         <font-awesome-icon icon="th-list" />
                         <span>Entities</span>
                     </span>
+                    <b-dropdown-item to="/entity/sys-role">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >SysRole</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/entity/sys-resources">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >SysResources</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/entity/sys-role-resources">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >SysRoleResources</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/entity/sys-user">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >SysUser</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/entity/sys-user-role">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >SysUserRole</span>
+                    </b-dropdown-item>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </b-nav-item-dropdown>
                 <b-nav-item-dropdown
